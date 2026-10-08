@@ -30,7 +30,7 @@ notice keeps advertising a release you can't install.
  Update Available
  New version 1.1.0 is available. Run pi update
 
- Your npm registry (packagefeedproxy.microsoft.io) holds new packages for about 7 days,
+ Your npm registry (npm-proxy.example.com) holds new packages for about 7 days,
  so `pi update` can't install this yet.
 
  Next installable: pi 1.0.0 around Thu, Oct 8, 3:15 PM (in 9h); latest pi 1.1.0
@@ -39,7 +39,7 @@ notice keeps advertising a release you can't install.
 
 ```
 $ pi update
-pi 1.1.0 can't be installed from your npm registry (packagefeedproxy.microsoft.io): the registry doesn't list it yet (it holds new packages for about 7 days).
+pi 1.1.0 can't be installed from your npm registry (npm-proxy.example.com): the registry doesn't list it yet (it holds new packages for about 7 days).
 Updating to pi 0.99.2 instead, the newest release your registry can install.
 Updating managed pi installation...
 Updated pi from 0.99.0 to 0.99.2
@@ -51,7 +51,7 @@ without this package.
 ## Install
 
 ```bash
-pi install git:github.com/<org>/pi-registry-update@v1.0.0
+pi install npm:@duncanbeard/pi-registry-update
 ```
 
 Restart pi. If you installed pi with the pi.dev installer, also run this once inside pi so that
@@ -152,7 +152,7 @@ version answer; that path is untested. The shell hook needs a pi.dev-installer i
 ```
 
 ```bash
-pi remove git:github.com/<org>/pi-registry-update
+pi remove npm:@duncanbeard/pi-registry-update
 ```
 
 Optionally delete `~/.pi/agent/registry-update.json` and the cache file.
@@ -171,3 +171,7 @@ Without a terminal, RPC mode exercises the commands end to end:
 pi --mode rpc --no-session --no-extensions -e ./extensions/registry-update.ts
 {"id":"1","type":"prompt","message":"/registry-update status"}
 ```
+
+## License
+
+MIT

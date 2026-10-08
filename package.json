@@ -1,11 +1,20 @@
 {
-	"name": "pi-registry-update",
+	"name": "@duncanbeard/pi-registry-update",
 	"version": "1.0.0",
 	"description": "Registry-aware pi updates: when your npm registry holds back newly published packages, `pi update` installs the newest release it can serve and the update notice says when newer ones become installable.",
-	"private": true,
 	"type": "module",
-	"license": "UNLICENSED",
+	"license": "MIT",
+	"author": "Duncan Beard",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DuncanBeard/pi-registry-update.git"
+	},
+	"homepage": "https://github.com/DuncanBeard/pi-registry-update#readme",
+	"bugs": {
+		"url": "https://github.com/DuncanBeard/pi-registry-update/issues"
+	},
 	"keywords": [
+		"pi-package",
 		"pi",
 		"pi-extension",
 		"npm-registry",
@@ -14,8 +23,12 @@
 	"files": [
 		"extensions",
 		"lib",
-		"README.md"
+		"README.md",
+		"LICENSE"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"pi": {
 		"extensions": [
 			"./extensions/registry-update.ts"
