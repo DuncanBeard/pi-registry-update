@@ -1,0 +1,30 @@
+{
+	"name": "pi-registry-update",
+	"version": "1.0.0",
+	"description": "Registry-aware pi updates: when your npm registry holds back newly published packages, `pi update` installs the newest release it can serve and the update notice says when newer ones become installable.",
+	"private": true,
+	"type": "module",
+	"license": "UNLICENSED",
+	"keywords": [
+		"pi",
+		"pi-extension",
+		"npm-registry",
+		"minimum-release-age"
+	],
+	"files": [
+		"extensions",
+		"lib",
+		"README.md"
+	],
+	"pi": {
+		"extensions": [
+			"./extensions/registry-update.ts"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	}
+}
